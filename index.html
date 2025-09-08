@@ -22,6 +22,37 @@
             <h1>Добро пожаловать на KinoFap</h1>
             <p>Смотрите фильмы без рекламы и ограничений!</p>
         </section>
+        <section class="catalog">
+            <h2>Топ фильмов</h2>
+            <div class="catalog-grid">
+                <div class="catalog-item" onclick="selectAndPlay(301, 'Матрица')">
+                    <img alt="Матрица" src="https://st.kp.yandex.net/images/film_big/301.jpg"/>
+                    <div class="catalog-info">
+                        <div class="catalog-title-item">Матрица</div>
+                        <div class="catalog-year">1999</div>
+                    </div>
+                </div>
+                <div class="catalog-item" onclick="selectAndPlay(326, 'Властелин колец: Братство кольца')">
+                    <img alt="Властелин колец" src="https://st.kp.yandex.net/images/film_big/326.jpg"/>
+                    <div class="catalog-info">
+                        <div class="catalog-title-item">Властелин колец: Братство кольца</div>
+                        <div class="catalog-year">2001</div>
+                    </div>
+                </div>
+                <div class="catalog-item" onclick="selectAndPlay(448, 'Форрест Гамп')">
+                    <img alt="Форрест Гамп" src="https://st.kp.yandex.net/images/film_big/448.jpg"/>
+                    <div class="catalog-info">
+                        <div class="catalog-title-item">Форрест Гамп</div>
+                        <div class="catalog-year">1994</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Поиск по названию фильма или сериала" />
+            <button onclick="searchContent()">Найти</button>
+        </section>
+        <div id="searchResults"></div>
     </main>
     <footer>
         <p>&copy; 2025 KinoFap | Разработано OWNER_AIR</p>
