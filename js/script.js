@@ -21,7 +21,7 @@ async function searchContent() {
     try {
         const response = await fetch(apiUrl, {
             headers: {
-                'X-API-KEY': 'your-api-key',
+                'X-API-KEY': '960dc4e3-9eae-4072-8f0c-98a5ed6c0d2a',
             }
         });
 
@@ -45,7 +45,7 @@ function displayResults(films) {
     }
 
     let html = '<div class="results-title">Результаты поиска:</div>';
-    films.forEach(film => {
+    films.slice(0, 5).forEach(film => {
         html += `
             <div class="film-item" onclick="selectFilm(${film.filmId}, '${film.nameRu || film.nameEn}')">
                 <img src="${film.posterUrlPreview || 'https://via.placeholder.com/100x150'}" alt="${film.nameRu || film.nameEn}">
@@ -62,6 +62,16 @@ function displayResults(films) {
 }
 
 function selectFilm(filmId, filmTitle) {
-    // Переход на страницу плеера
-    window.location.href = `player.html?filmId=${filmId}&title=${filmTitle}`;
+    document.getElementById("searchResults").innerHTML = '';
+    document.getElementById("searchInput").value = '';
+    openPlayer(filmId); // Запуск плеера сразу после выбора фильма
+}
+
+function openPlayer(filmId) {
+    const iframeSrc = `https://api1690380040.atomics.ws/embed/kp/${filmId}`;
+    document.getElementById("playerIframe").src = iframeSrc;
+}
+
+function closePlayer() {
+    document.getElementById("playerIframe").src = ""; // Очистить iframe при закрытии
 }
