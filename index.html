@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - KinoFap</title>
+    <title>KinoFap - Смотреть фильмы без рекламы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,46 +18,32 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="intro">
             <h1>Добро пожаловать на KinoFap</h1>
             <p>Смотрите фильмы без рекламы и ограничений!</p>
         </section>
-        <section class="catalog">
-            <h2>Топ фильмов</h2>
-            <div class="catalog-grid">
-                <div class="catalog-item" onclick="selectAndPlay(301, 'Матрица')">
-                    <img alt="Матрица" src="https://st.kp.yandex.net/images/film_big/301.jpg"/>
-                    <div class="catalog-info">
-                        <div class="catalog-title-item">Матрица</div>
-                        <div class="catalog-year">1999</div>
-                    </div>
-                </div>
-                <div class="catalog-item" onclick="selectAndPlay(326, 'Властелин колец: Братство кольца')">
-                    <img alt="Властелин колец" src="https://st.kp.yandex.net/images/film_big/326.jpg"/>
-                    <div class="catalog-info">
-                        <div class="catalog-title-item">Властелин колец: Братство кольца</div>
-                        <div class="catalog-year">2001</div>
-                    </div>
-                </div>
-                <div class="catalog-item" onclick="selectAndPlay(448, 'Форрест Гамп')">
-                    <img alt="Форрест Гамп" src="https://st.kp.yandex.net/images/film_big/448.jpg"/>
-                    <div class="catalog-info">
-                        <div class="catalog-title-item">Форрест Гамп</div>
-                        <div class="catalog-year">1994</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <section class="search-section">
             <input type="text" id="searchInput" placeholder="Поиск по названию фильма или сериала" />
             <button onclick="searchContent()">Найти</button>
         </section>
+
         <div id="searchResults"></div>
+
+        <section class="catalog">
+            <h2>Топ фильмы</h2>
+            <div class="catalog-grid">
+                <!-- Movie items will be dynamically inserted here -->
+            </div>
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2025 KinoFap | Разработано OWNER_AIR</p>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
