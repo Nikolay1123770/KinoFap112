@@ -9,9 +9,15 @@ async function searchContent() {
         return;
     }
 
-    // Замените на свой API URL
+    // Проверка на секретную команду
+    if (searchInput === '#112') {
+        window.location.href = 'secret.html'; // Перенаправление на секретную страницу
+        return;
+    }
+
+    // Замените на свой API URL для поиска фильмов
     const apiUrl = `https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${encodeURIComponent(searchInput)}&page=1`;
-    
+
     try {
         const response = await fetch(apiUrl, {
             headers: {
