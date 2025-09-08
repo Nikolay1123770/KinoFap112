@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильмы - KinoFap</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="movies.html">Фильмы</a></li>
+                <li><a href="player.html">Плеер</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Поиск по названию фильма или сериала" />
+            <button onclick="searchContent()">Найти</button>
+        </section>
+        <div id="searchResults"></div>
+    </main>
+    <footer>
+        <p>&copy; 2025 KinoFap | Разработано OWNER_AIR</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
